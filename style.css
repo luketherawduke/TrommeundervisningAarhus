@@ -1,0 +1,99 @@
+
+
+body{
+    color: white;
+    background-color: darkslategrey;
+    font-family: Arial, "times", "serif";
+    margin: 20px;
+    padding: 20px;
+    border: 20px;
+}
+
+#background{
+    background-position: right;
+    background-size: 2000px;
+    margin-left: 30px;
+    width: 700px;
+    height: 400px;
+}
+
+.form {
+    width: 40%; /* Gør formularen lidt mindre */
+    background-color: #222; /* Mørk baggrund */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form input,
+.form textarea {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-left: auto; /* Centrerer dem til venstre */
+    margin-right: auto; /* Centrerer dem til højre */
+}
+
+.form button {
+    background-color: #ffcc00;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+ul{
+    color: white;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+a{
+    color: white;
+    font-size: 20px;
+}
+
+a:hover{
+    color: lightblue;
+    font-size: 24px;
+}
+
+#forside {
+    width: 800px;
+    height: auto;
+    right: 0;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.container {
+    display: flex; /*Placerer elementerne side om side*/
+    align-items: center; /* Justerer elementerne lodret */
+    gap: 20px; /* Laver mellemrum mellem billedet og teksten */
+}
+
+.image img {
+    width: 900px; /* Sørg for, at billedet ikke bliver for stort */
+    height: auto;
+}
+
+
+/*En menu af links med hover-effekter
+  Indhold i flere kolonner (uden at bruge en tabel!)
+Brug af margin, padding, border og styling af tekst
