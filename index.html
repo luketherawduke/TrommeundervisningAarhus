@@ -1,7 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<link href="style.css" type="text/css" rel="stylesheet">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trommeundervisning - Aarhus</title>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<div class="Overskrift">
+<h1>
+    Velkommen til Trommeundervisning Aarhus!
+</h1>
+</div>
+
+<p>
+    Vi tilbyder trommeundervisning til børn og teenagere i eget hjem til en overkommelig pris.<br>
+    Vores undervisning bliver pt. kun tilbudt af vores tilknyttede underviser Lukas, men der er flere undervisere på vej.
+</p>
+
+<div id="undervisere">
+    <p>Læs mere om vores underviser her:</p>
+<ul>
+    <li><a href="Lukas.html">Lukas</a></li>
+</ul>
+</div>
+
+<div class="container">
+    <!-- Billedet -->
+    <div class="image">
+        <img src="PXL_20250106_161132093.jpg" alt="Trommeundervisning">
+    </div>
+
+    <!-- Kontaktformular -->
+    <div class="form">
+        <h2>Anmod om undervisning</h2>
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+            <label for="email">Din email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+
+            <label for="message">Din besked:</label>
+            <textarea id="message" name="message" required></textarea>
+            <br><br>
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Forhindrer standard formularindsendelse
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+            let responseMessage = document.getElementById("responseMessage");
+
+            // Simpel validering
+            if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
+                responseMessage.style.color = "red";
+                responseMessage.textContent = "Alle felter skal udfyldes!";
+                return;
+            }
+
+            // Simuler en succesfuld formularindsendelse
+            responseMessage.style.color = "green";
+            responseMessage.textContent = "Tak for din besked, " + name + "! Vi vender tilbage snarest.";
+
+            // Nulstil formular
+            document.getElementById("contactForm").reset();
+        });
+    });
+</script>
+
 </body>
 </html>
